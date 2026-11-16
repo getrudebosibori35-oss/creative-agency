@@ -1,0 +1,162 @@
+
+.projects-section {
+  padding: 70px 7%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+}
+
+.section-heading button,
+.project-form button {
+  border: none;
+  background: #7950e8;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.section-heading button:hover,
+.project-form button:hover {
+  background: #6038c7;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin: 10px 0;
+}
+
+.project-info p {
+  color: #62677a;
+}
+
+.category {
+  display: inline-block;
+  background: #eee8ff;
+  color: #7950e8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  padding: 25px;
+  margin: 20px 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.project-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.project-form button {
+  align-self: flex-start;
+}
+
+.empty-message {
+  padding: 25px 0;
+  color: #62677a;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .header-button {
+    padding: 8px 12px;
+  }
+
+  .hero {
+    padding: 70px 7%;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
